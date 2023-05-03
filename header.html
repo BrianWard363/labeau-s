@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script>
+    const links = document.querySelectorAll('.nav-link');
+
+if (links.length) {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      links.forEach((link) => {
+        link.classList.remove('active');
+      });
+      link.classList.add('active');
+      const href = link.getAttribute('href');
+      window.location = href;
+    });
+
+    // check if the link URL matches the current URL and add the active class
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+}
+
+  </script>
+  
+
+</head>
+<body>
+
+ <!-- Navigation -->
+ <nav class="navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid navbar px-4 "> 
+    <a class="navbar-brand" href="index.html">La Beau's</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>      
+      
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto" style="overflow-x: auto;">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="souvenir_shop.html">Souvenir Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="jobs.html">Apply for Job</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://m.facebook.com/profile.php?id=105785836154663"><i class="fab fa-facebook fa-2x"></i></a>
+          <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/""><i class="fab fa-instagram fa-2x"></i></a>
+        </li>            
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- End of Navigation -->
