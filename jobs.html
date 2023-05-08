@@ -6,31 +6,146 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Popper.js -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
- 
    <!-- Bootstrap CSS --><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   <script src="page.js"></script>
 
-  <!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <script>
-      // Use $.get() to load the header and footer files asynchronously
-      var headerRequest = $.get('header.html');
-      var footerRequest = $.get('footer.html');
-
-      // Use $.when() to wait for both requests to complete
-      $.when(headerRequest, footerRequest).done(function(header, footer) {
-        // Append the header and footer to the page
-        $('#header').html(header[0]);
-        $('#footer').html(footer[0]);
-      });
-    </script>
   </head>
+  <body>
   <body>
     <div id="header"></div>
 
     <!-- Page content goes here -->
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <p class="text-center p-1 m-5">
+          We are looking for fun, down-to-earth people that want work hard and play hard at a fast casual restaurant in Garden City, Utah. 
+          We are looking for grill ninjas, shake creating masters, or anyone that wants to work with an awesome crew.  If this sounds like you please scroll down and fill out an application.
+          <br/>
+          *Work Memorial Day through Labor Day.
+          <br/>
+          *housing available (unless already at capacity)
+          <br/>
+          *Free meal each work day
+          <br/>
+          *Starting pay at $10/hour and $15/hour after 40 hours
+          <br/>
+          *Hang out at the beach
+          <br/>
+          *Make a lot of friends
+          <br/>
+          *Come eat delicious shakes
+          <br/>
+          *Overtime available
+          <br/>
+          *All Sundays Off
+          <br/>
+          *One other day off during the week
+          <br/>
+          We’ll reach out to you within a few days after submitting your application 
+        </p>
+      </div>
+    </div>
+    
+ <div class="container">
+  <h1 class="text-center">La Beau's Employment Application</h1>
+  <form target="_blank" action="https://formsubmit.co/d9a50db1ba50c5ce9ac9c61ab6bf414a" method="POST">
+    <div class="form-group">
+      <div class="row mb-3">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Full & Last Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="adress" class="form-control" placeholder="Current Adress" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="permanent-adress" class="form-control" placeholder="Permanent Adress" required>
+        </div>
+        <div class="col-md-12 mb-3">
+          <input type="text" name="cell-phone-number" class="form-control" placeholder="Cell Phone Number" required>
+        </div>
+      </div>
+        <h2 class="text-center">Questions</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="food-handlers" class="form-label">1. Do you have a Food Handlers Permit?</label>
+              <input type="text" name="food-handlers" id="food-handlers" class="form-control" placeholder="Yes or no" required>
+            </div>
+            <div class="mb-">
+              <label for="reason-for-work" class="form-label">2. Why do you want to work at LaBeau's?</label>
+              <input type="text" name="reason-for-work" id="reason-for-work" class="form-control" placeholder="Why you want to work" required>
+            </div>
+            <div class="mb-3">
+              <label for="a-b" class="form-label">3. Which best describes you? (There is no right or wrong answer as everyone has a different reason to work thoughout the summer.)</label>
+              <select name="a-b" id="a-b" class="form-select" required>
+                <option value="">Select option</option>
+                <option value="A">A. You want to work a lot of hours and make a lot of money.</option>
+                <option value="B">B. You're more interested in the experience of living at Bear Lake and not being overwhelmed with work.</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="date" class="form-label">4. When would be your available start date?</label>
+              <input type="date" name="date" id="date" class="form-control" placeholder="Start Date" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="old" class="form-label">5. How old are you?</label>
+              <input type="text" name="old" id="old" class="form-control" placeholder="How old are you?" required>
+            </div>
+            <div class="mb-3">
+              <label for="reiends-famils" class="form-label">6. Do you have a friend or family member that would be interested in working?</label>
+              <input type="text" name="reiends-famils" id="reiends-famils" class="form-control" placeholder="Have any friends or family members interested to work?" required>
+            </div>
+            <div class="mb-3">
+              <label for="referred" class="form-label">7. Who referred you to LaBeau's?</label>
+              <input type="text" name="referred" id="referred" class="form-control" placeholder="Who referred you?" required>
+            </div>
+            <div class="mb-3">
+              <label for="housing" class="form-label">8. Do you need housing?</label>
+              <input type="text" name="housing" id="housing" class="form-control" placeholder="Need housing?" required>
+            </div>
+            <div class="mb-3">
+              <label for="text-email" class="form-label">9. Is phone or email better for us to get in contact?</label>
+              <input type="text" name="text-email" id="text-email" class="form-control" placeholder="Text or email" required>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+      <textarea placeholder="Your Questions" class="form-control" name="message" rows="10"></textarea>
+      <p><br/></p>
+    </div>
+    <button type="submit" class="btn btn-lg btn-danger btn-block">Submit Application</button>
+  </form>
+</div>
+
+<div class="container">
+  <h1 class="text-center">La Beau's Former Employers</h1>
+  <form target="_blank" action="https://formsubmit.co/d9a50db1ba50c5ce9ac9c61ab6bf414a" method="POST">
+      <div class="row mb-3">
+        <div class="col-md-6 mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" name="wage" class="form-control" placeholder="Hourly wage" required>
+        </div>
+      </div>
+      <div class="col">
+        <textarea name="message" class="form-control" rows="10" placeholder="Reason for Leaving"></textarea>
+      </div>
+    <button type="submit" class="btn btn-lg btn-danger btn-block">Submit Quit Application</button>
+    <p><br/></p>
+  </form>
+</div>
 
     <div id="footer"></div>
   </body>

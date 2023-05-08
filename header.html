@@ -5,29 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="stylesheet" type="text/css" href="index.css">
-  <script>
-    const links = document.querySelectorAll('.nav-link');
-
-if (links.length) {
-  links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      links.forEach((link) => {
-        link.classList.remove('active');
-      });
-      link.classList.add('active');
-      const href = link.getAttribute('href');
-      window.location = href;
-    });
-
-    // check if the link URL matches the current URL and add the active class
-    if (link.href === window.location.href) {
-      link.classList.add('active');
-    }
-  });
-}
-
-  </script>  
+  <script async defer src="nav_bar.js"></script>
 </head>
 <body>
 
@@ -67,8 +45,4 @@ if (links.length) {
           <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/""><i class="fab fa-instagram fa-2x"></i></a>
         </li>            
       </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- End of Navigation -->
+   
