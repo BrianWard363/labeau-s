@@ -12,8 +12,8 @@ if (links.length) {
       window.location = href;
     });
 
-    // check if the link URL matches the current URL and add the active class
-    if (link.href === window.location.href) {
+    // check if the link URL matches the current URL or if the current URL ends with a forward slash and the link has an href of "/"
+    if (link.href === window.location.href || (window.location.href.endsWith('/') && link.getAttribute('href') === '/')) {
       link.classList.add('active');
     }
   });
