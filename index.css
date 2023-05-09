@@ -35,10 +35,10 @@ body {
 }
 
 .centered-logo img {
-  width: 400px;
-  height: 200px;
+  max-width: 100%;
+  height: auto;
+  max-height: 230px;
 }
-
 
 .img-border {
   border-top-left-radius: 1.7rem;
@@ -51,9 +51,25 @@ body {
 
 /* Logo and navbar */
 .logo {
-  height: 50px;
   width: 150px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
 }
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
