@@ -1,10 +1,10 @@
-const links = document.querySelectorAll('.nav-link');
+const navbarLinks = document.querySelectorAll('#navbar .nav-link');
 
-if (links.length) {
-  links.forEach((link) => {
+if (navbarLinks.length) {
+  navbarLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      links.forEach((link) => {
+      navbarLinks.forEach((link) => {
         link.classList.remove('active');
       });
       link.classList.add('active');

@@ -13,6 +13,14 @@ html {
   font-size: 20px;
 }
 
+#banner {
+  background-color: red; 
+  color: #fff; /* white text */
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
 
 body {
   display: flex;
