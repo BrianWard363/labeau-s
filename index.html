@@ -50,7 +50,7 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam atque esse enim, consectetur reiciendis illum ratione animi vitae quia nostrum, consequuntur cum pariatur labore voluptatum error voluptatibus, perferendis veniam! Alias?</p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img class="responsive d-block w-100" src="img/images.jpg" loading="lazy" alt="labeautoo">
                   <div class="carousel-caption">
                     <h2>Lorem ipsum dolor</h5>
@@ -81,85 +81,80 @@
       <button type="button" class="btn btn-lg btn-danger" onclick="window.location.href = 'menu.html';">View Menu</button>
     </div>
   </section>
-
   <section>
     <br>
-    <h1 class="text-center">Reviews</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div id="card-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">First Card</h5>
-                        <p class="card-text text-center">This is the first card.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Sec Card</h5>
-                        <p class="card-text text-center">This is the second card.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Third Card</h2>
-                        <p class="card-text text-center">This is the third card.</p>
-                      </div>
-                    </div>
+    <section>
+      <h1 class="text-center">What Our Custermers Say</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div id="reviews" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#reviews" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="card food-card d-block">
+                    <h1 class="review-card-text">Hannah Morgan</h1>
+                    <p class="review-card-text">This place is so good! My family eats here every time we go to Bear lake and their food is always so yummy. The shakes are top notch! We always get the fresh raspberry shakes and they are delicious! The ice cream is so creamy and the raspberries are so sweet. There is always a long line but they are really fast at getting everyone's food out. I do not believe they have indoor dining but they have lots of picnic tables in a nice shady area.</p>
                   </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row">
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Four Card</h5>
-                        <p class="card-text text-center">This is the fourth card.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Fifth Card</h2>
-                        <p class="card-text text-center">This is the fifth card.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-12 mb-3">
-                    <div class="card review-card">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Sixth Card</h2>
-                        <p class="card-text text-center">This is the sixth card.</p>
-                      </div>
-                    </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <div class="card food-card d-block">
+                    <h1 class="review-card-text">Luke Rasmussen</h1>
+                    <p class="review-card-text">The food is absolutely delicious. I personally love the pastrami burger. It's got a nice flavor, and it was as perfect as a burger could be. The fries are just the right balance of crispy and soft. And then, to top it all off, you have to get the famous raspberry shake. It's amazingly creamy and are definitely the best raspberry shakes around. Would definitely recommend coming here</p>
                   </div>
                 </div>
-              </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <div class="card food-card d-block">
+                    <h1 class="review-card-text">Pamela H</h1>
+                    <p class="review-card-text">I read about this place on a traveler blog and decided to go since they had raspberry shakes. Was not disappointed.
+                      <br>
+                      Got there early (11:30a) for lunch and the line was not very long. You order at the front outside window. Ordered the shake and a cheeseburger and fries. My shake came out first. It was thick, had some fresh raspberries, and was made with real ingredients. My burger and fries came out hot and I sat at an outside table and ate.  If I lived there I would frequent this place when I was craving a real shake and a burger. 👍🏻</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <div class="card food-card d-block">
+                    <h1 class="review-card-text">Jim Auto</h1>
+                    <p class="review-card-text">Great food! The burger was juicy and tasty. The tots were crispy and yummy. The shake was out of this world delicious. Would come again. It's more on the expensive side, so make sure your wallet is ready.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <div class="card food-card d-block">
+                    <h1 class="review-card-text">Sean Bourne</h1>
+                    <p class="review-card-text">Took our kids and their friends there for Bear Lake's famous raspberry shakes.  There was only one other place open besides Labeau's, so it was quite busy.  However, they got our order out fast.  I was actually very surprised at how fast our order came up.  The kids loved the shakes and always have a good time.  Its a summer tradition.
+                      <br>
+                      Kid-friendliness: Very kid and family friendly environment.
+                      <br>
+                      Parking: It can get busy enough to the point parking is difficult to find, especially when all the establishments along the street are open and its the middle of summertime.  There is additional parking across the street from Labeau's.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <div class="card food-card">
+                    <h1 class="review-card-text">Elisa Black</h1>
+                    <p class="review-card-text">You cant go to Bear Lake and not get a LaBeau's shake! We go every summer. The multiple flavors are unique and absolutely delicious. Theyve got your classic flavors, and also things like peanut butter, burnt almond fudge, and more. They are the best shakes I know of!</p>
+                  </div>
+                </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#reviews" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#reviews" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#card-carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#card-carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
-    </div>  
-  </section>
+      <br/>
+    </section>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -188,7 +183,7 @@
     <h1 class="text-center">Food Pics</h1>
     <br>
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-4 col-md-6 col-sm-12">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/orings.jpg" class="img-border" loading="lazy" alt="Onion Rings">
           <div class="card-body">
@@ -197,7 +192,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-4 col-md-6 col-sm-12">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/fries.jpg" class="img-border" loading="lazy" alt="French Fries">
           <div class="card-body">
@@ -206,7 +201,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 ">
+      <div class="col-xl-4 col-md-6 col-sm-12 ">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/hambeger.jpg" class="img-border" loading="lazy" alt="Hamburger">
           <div class="card-body">
@@ -215,7 +210,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-4 col-md-6 col-sm-12">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/shake.jpg" class="img-border" loading="lazy" alt="Milkshake">
           <div class="card-body">
@@ -224,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-4 col-md-6 col-sm-12">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/shakes2.jpg" class="img-border" loading="lazy" alt="Milkshake">
           <div class="card-body">
@@ -233,7 +228,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-4 col-md-6 col-sm-12">
         <div class="card food-card mb-4" style="height: 500px;">
           <img src="img/shakes3.jpg" class="img-border" loading="lazy" alt="Milkshake">
           <div class="card-body">
@@ -246,7 +241,7 @@
   </div>
 </section>
 
-  <section class="px-3 px-sm-0 px-sm-3">
+  <section class="px-3 px-sm-0 px-xl-3">
     <div class="row justify-content-center mt-5">
       <div class="col-md-3 mb-5 d-flex align-items-center justify-content-center">
         <div class="card border-0">
@@ -254,7 +249,7 @@
             <h3 class="card-title">Opens by Memorial Day</h3>
           </div>
         </div>
-      </div><div class="col-md-3 mb-5">
+      </div><div class="col-xl-4 mb-5">
         <div class="card shadow card-hours">
           <div class="card-body">
             <h3 class="card-title text-center">Hours:</h3>
@@ -264,7 +259,7 @@
             <p class="card-text text-center font-weight-bold">Monday-Friday:<br/>12:00 am - 9:30 pm<br/>Saturday:<br/>12:00 am - 10 pm<br/>Closed Sunday</p>
           </div>
         </div>
-      </div><div class="col-md-3 mb-5 d-flex align-items-center justify-content-center">
+      </div><div class="col-xl-3 mb-5 d-flex align-items-center justify-content-center">
         <div class="card border-0">
           <div class="card-body">
             <h3 class="card-title">Closes by Labor Day</h5>
@@ -272,10 +267,10 @@
         </div>
       </div>
     </div>
-    <p class="text-center">For the most up to date hours please view our hours on <a class="link" href="https://www.google.com/search?q=labeau%27s+bear+lake&client=firefox-b-1-d&ei=XjVZZMzxIIiD0PEP8bqD6AI&ved=0ahUKEwjMmOe0o-b-AhWIATQIHXHdAC0Q4dUDCBA&uact=5&oq=labeau%27s+bear+lake&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzINCC4QDRCABBDHARCvATIHCAAQDRCABDIHCAAQDRCABDIKCAAQCBAeEA0QCjICCCYyAggmMggIABCKBRCGAzIICAAQigUQhgM6BQgAEKIEOggIABCJBRCiBDoLCAAQHhANEPEEEAo6BggAEB4QDTobCC4QDRCABBDHARCvARCXBRDcBBDeBBDgBBgBSgQIQRgBUN8pWPktYLk3aAFwAHgAgAGHAYgBwQOSAQMwLjSYAQCgAQHAAQHaAQYIARABGBQ&sclient=gws-wiz-serp">Google.</a></p>
+    <p class="text-center p-5">For the most up to date hours please view our hours on <a class="link" href="https://www.google.com/search?q=labeau%27s+bear+lake&client=firefox-b-1-d&ei=XjVZZMzxIIiD0PEP8bqD6AI&ved=0ahUKEwjMmOe0o-b-AhWIATQIHXHdAC0Q4dUDCBA&uact=5&oq=labeau%27s+bear+lake&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzINCC4QDRCABBDHARCvATIHCAAQDRCABDIHCAAQDRCABDIKCAAQCBAeEA0QCjICCCYyAggmMggIABCKBRCGAzIICAAQigUQhgM6BQgAEKIEOggIABCJBRCiBDoLCAAQHhANEPEEEAo6BggAEB4QDTobCC4QDRCABBDHARCvARCXBRDcBBDeBBDgBBgBSgQIQRgBUN8pWPktYLk3aAFwAHgAgAGHAYgBwQOSAQMwLjSYAQCgAQHAAQHaAQYIARABGBQ&sclient=gws-wiz-serp">Google.</a></p>
   </section>
 
-  <section class="pb-4">
+  <section class="p-5">
     <h1 class="text-center">Locations</h1>
     <div class="row justify-content-center">
       <div class="col-md-4">
