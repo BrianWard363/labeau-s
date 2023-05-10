@@ -31,19 +31,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .centered-logo img {
-  max-width: 100%;
-  height: auto;
+  width: 816/2px;
+  height: 150px;
   max-height: 230px;
+  padding: 20px;
 }
 
 .img-border {
   border-top-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
-  width: auto;
+  width: 500px auto;
   height: 300px;
   object-fit: cover;
 }
