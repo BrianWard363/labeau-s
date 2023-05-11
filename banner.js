@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Set the start and end dates and times
-    var startDate = new Date('May 9, 2023 10:00:00').getTime(); // 10:00 AM
-    var endDate = new Date('May 9, 2023 13:55:00').getTime(); // 6:30 PM on the third day
+    var startDate = new Date('May 9, 2023 10:00:00').getTime(); // start time
+    var endDate = new Date('May 9, 2023 13:55:00').getTime(); // end time
   
     // Get the banner element
     var banner = document.getElementById('banner');
@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
   
         // Set the text of the banner to the remaining time
-        banner.innerHTML = '<h3>Clothes on sale for 15% off.</h3>' + '<p>This offer ends in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds.</p>';
+        banner.innerHTML = 
+        '<h3>Clothes on sale for 15% off.</h3>' + '<p>This offer ends in ' + days + ' days, ' + hours + ' hours, ' + minutes + ' minutes, and ' + seconds + ' seconds.</p>'; // edit the beginning of the row to say what you want to say
         banner.classList.remove('d-none'); // Show the banner
       } else {
         // Clear the interval
