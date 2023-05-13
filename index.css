@@ -25,7 +25,6 @@ html {
   }
 }
 
-
 #banner {
   background-color: red; 
   color: #fff; /* white text */
@@ -235,4 +234,8 @@ input, textarea, select {
 .link {
   font-weight: bold;
   color: red;
+}
+
+#job-info ul li {
+  margin: 20px;
 }
