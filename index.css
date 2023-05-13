@@ -19,6 +19,13 @@ html {
   font-size: 30px;
 }
 
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
 #banner {
   background-color: red; 
   color: #fff; /* white text */
@@ -178,6 +185,20 @@ body {
 .history-card::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 767px) {
+  .history-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .review-card-text {
+    padding: 30px;
+  }
+}
+
 
 .fqa-card {
   min-height: 800px;
