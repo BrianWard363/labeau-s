@@ -27,8 +27,8 @@
             More
           </a>
           <ul class="dropdown-menu dropdown-menu-light mb-4" aria-labelledby="navbarLightDropdownMenuLink">
-            <li><a class="dropdown-item" href="index.html#location">Locations</a></li>
-            <li><a class="dropdown-item" href="index.html#jobs">Apply for Job</a></li>
+            <li><a class="dropdown-item" href="index.html#location" data-bs-dismiss="collapse">Locations</a></li>
+            <li><a class="dropdown-item" href="index.html#jobs" data-bs-dismiss="collapse">Apply for Job</a></li>
           </ul>
         </li>
       </ul>
@@ -39,6 +39,7 @@
     </div>    
   </div>
 </nav>
+
 
 <script>
   // Add event listener to each link
@@ -53,5 +54,16 @@
       }
     });
   });
+
+  // Add event listener to each dropdown item in the "More" dropdown
+  var dropdownItems = document.querySelectorAll('#navbar .dropdown-item');
+  dropdownItems.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      // Toggle the collapse class of the navigation element
+      var navbar = document.querySelector('#navbarNavLightDropdown');
+      navbar.classList.remove('show');
+    });
+  });
 </script>
+
 
