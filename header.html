@@ -1,39 +1,57 @@
 <!-- Navigation -->
-<nav class="navbar-expand-xl navbar-light bg-light" id="navbar">
-  <div class="container-fluid navbar px-4 "> 
-    <a class="navbar-brand" href="index.html"><img class="logo" src="img/Vintage-21-01-2019_19h05m44s.webp" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar-expand-xxl navbar-light fixed-top bg-light" id="navbar">
+  <div class="container-fluid navbar px-4"> 
+    <a class="navbar-brand" href="index.html#top"><img class="logo" src="img/Vintage-21-01-2019_19h05m44s.webp" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavLightDropdown" aria-controls="navbarNavLightDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>      
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto" style="overflow-x: auto;">
+    <div class="collapse navbar-collapse" id="navbarNavLightDropdown">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="index.html#top">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="index.html#menu">Menu&nbsp;&&nbsp;Reviews</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="souvenir_shop.html">Souvenir Shop</a>
+          <a class="nav-link" href="index.html#fqa">FAQ&nbsp;&&nbsp;Food</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="index.html#sweet_shop">Sweet&nbsp;Shop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="jobs.html">Apply for Job</a>
+          <a class="nav-link" href="index.html#hours">Hours</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu dropdown-menu-light mb-4" aria-labelledby="navbarLightDropdownMenuLink">
+            <li><a class="dropdown-item" href="index.html#location">Locations</a></li>
+            <li><a class="dropdown-item" href="index.html#jobs">Apply for Job</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://m.facebook.com/profile.php?id=105785836154663" aria-label="Facebook Social Link"><i class="fab fa-facebook fa-2x"></i></a>
-          <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/" aria-label="Instagram Social Link"><i class="fab fa-instagram fa-2x"></i></a>
-        </li>            
       </ul>
+      <div class="social-icons">
+        <a class="nav-link" href="https://m.facebook.com/profile.php?id=105785836154663" aria-label="Facebook Social Link"><i class="fab fa-facebook fa-2x pe-1"></i></a>
+        <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/" aria-label="Instagram Social Link"><i class="fab fa-instagram fa-2x"></i></a>
+      </div> 
     </div>    
   </div>
 </nav>
+
+<script>
+  // Add event listener to each link
+  var navLinks = document.querySelectorAll('#navbar .nav-link');
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      // Check if the clicked link is not the dropdown toggle
+      if (!link.classList.contains('dropdown-toggle')) {
+        // Toggle the collapse class of the navigation element
+        var navbar = document.querySelector('#navbarNavLightDropdown');
+        navbar.classList.remove('show');
+      }
+    });
+  });
+</script>
 
