@@ -19,6 +19,10 @@ html {
   font-size: 30px;
 }
 
+body {
+  font-family: 'Libre Baskerville', serif !important;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 12px;
@@ -69,6 +73,10 @@ body {
   height: 50px;
 }
 
+.dropdown-menu.dropdown-menu-light.mb-4 {
+  border: none;
+}
+
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
@@ -91,13 +99,13 @@ body {
 #footer .nav-link:hover {
   color: red !important;
   text-decoration: underline;
-  text-underline-offset: 8px;
+  text-underline-offset: 10px;
   text-decoration-thickness: 4px;
   font-weight: bold;
 }
 
 @media (max-width: 1199.98px) {
-  /* Mobile view until XXL breakpoint */
+  /* Mobile view until XL breakpoint */
   .navbar-nav {
     max-height: 500px;
     overflow-y: scroll;
@@ -166,6 +174,10 @@ body {
   min-height: 300px;
 }
 
+.food-card {
+  height: 400px; /* Adjust the height value as needed */
+}
+
 .review-card-text {
   text-align: center;
   padding: 20px;
@@ -197,7 +209,6 @@ body {
     padding: 30px;
   }
 }
-
 
 .fqa-card {
   min-height: 800px;
