@@ -28,42 +28,18 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-light mb-4" aria-labelledby="navbarLightDropdownMenuLink">
             <li><a class="dropdown-item" href="index.html#location" data-bs-dismiss="collapse">Locations</a></li>
+            <li><a class="dropdown-item" href="index.html#large_groups" data-bs-dismiss="collapse">Large Groups</a></li>
             <li><a class="dropdown-item" href="index.html#jobs" data-bs-dismiss="collapse">Apply for Job</a></li>
           </ul>
         </li>
       </ul>
       <div class="social-icons">
-        <a class="nav-link" href="https://m.facebook.com/profile.php?id=105785836154663" aria-label="Facebook Social Link"><i class="fab fa-facebook fa-2x pe-1"></i></a>
-        <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/" aria-label="Instagram Social Link"><i class="fab fa-instagram fa-2x"></i></a>
+        <a class="nav-link" href="https://m.facebook.com/profile.php?id=105785836154663" aria-label="Facebook Social Link"><i class="fab fa-facebook fa-x pe-1"></i></a>
+        <a class="nav-link" href="https://www.instagram.com/labeausofbearlake/" aria-label="Instagram Social Link"><i class="fab fa-instagram fa-x"></i></a>
       </div> 
     </div>    
   </div>
 </nav>
 
-
-<script>
-  // Add event listener to each link
-  var navLinks = document.querySelectorAll('#navbar .nav-link');
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      // Check if the clicked link is not the dropdown toggle
-      if (!link.classList.contains('dropdown-toggle')) {
-        // Toggle the collapse class of the navigation element
-        var navbar = document.querySelector('#navbarNavLightDropdown');
-        navbar.classList.remove('show');
-      }
-    });
-  });
-
-  // Add event listener to each dropdown item in the "More" dropdown
-  var dropdownItems = document.querySelectorAll('#navbar .dropdown-item');
-  dropdownItems.forEach(function(item) {
-    item.addEventListener('click', function(event) {
-      // Toggle the collapse class of the navigation element
-      var navbar = document.querySelector('#navbarNavLightDropdown');
-      navbar.classList.remove('show');
-    });
-  });
-</script>
 
 
