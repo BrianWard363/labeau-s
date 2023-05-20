@@ -77,6 +77,17 @@ body {
   border: none;
 }
 
+.dropdown-toggle:focus,
+.dropdown-toggle:active,
+.dropdown-toggle:hover,
+.dropdown-menu.show .dropdown-item:hover {
+  background-color: transparent !important;
+  color: red;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 4px;
+}
+
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
@@ -305,3 +316,4 @@ input, textarea, select {
   margin: 0 4px;
   padding: 0;
 }
+

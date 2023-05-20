@@ -28,25 +28,29 @@ if (window.jQuery) {
   window.addEventListener('load', loadPage);
 }
 
-// Add event listener to each link
-var navLinks = document.querySelectorAll('#navbar .nav-link');
-navLinks.forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    // Check if the clicked link is not the dropdown toggle
-    if (!link.classList.contains('dropdown-toggle')) {
-      // Toggle the collapse class of the navigation element
-      var navbar = document.querySelector('#navbarNavLightDropdown');
-      navbar.classList.remove('show');
-    }
-  });
-});
-
-// Add event listener to each dropdown item in the "More" dropdown
-var dropdownItems = document.querySelectorAll('#navbar .dropdown-item');
-dropdownItems.forEach(function(item) {
-  item.addEventListener('click', function(event) {
-    // Toggle the collapse class of the navigation element
-    var navbar = document.querySelector('#navbarNavLightDropdown');
+function collapseNavbar() {
+  const navbar = document.getElementById('navbarNavLightDropdown');
+  if (navbar.classList.contains('show')) {
     navbar.classList.remove('show');
+  }
+}
+
+// Smooth scrolling animation
+document.querySelectorAll('a.nav-link').forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    const navbarHeight = document.getElementById('navbar').offsetHeight;
+    const offset = target.offsetTop - navbarHeight;
+
+    window.scrollTo({
+      top: offset,
+      behavior: 'smooth'
+    });
+
+    if (link.parentNode.parentNode.classList.contains('dropdown-menu')) {
+      collapseNavbar();
+    }
   });
 });
