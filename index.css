@@ -317,3 +317,13 @@ input, textarea, select {
   padding: 0;
 }
 
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-right: 10px;
+}
+
