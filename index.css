@@ -314,3 +314,16 @@ select:focus {
 .heading {
   margin-right: 10px;
 }
+
+.shop-card {
+  border: 4px solid red !important;
+  border-radius: 2rem !important;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.shop-card img {
+  border-top-left-radius: 1.8rem;
+  border-top-right-radius: 1.8rem;
+  border-bottom: 4px solid red;
+}
