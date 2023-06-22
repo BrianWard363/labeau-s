@@ -19,14 +19,16 @@
     <link rel="stylesheet" href="https://fonts.bunny.net/css?family=Libre+Baskerville:400&display=swap">    
     <script async defer src="page.js"></script>
     <script defer src="banner.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body id="top" class="anchor">
     <div id="banner" class="d-none"></div>
     <div id="header"></div>
+    <canvas id="circleCanvas"></canvas>
     <section>
       <div class="container">
         <div class="centered-logo">
-          <img src="img/Vintage-21-01-2019_19h05m44s.webp" alt="Logo" style="height: 150px; width: 400px;" title="Home page">
+          <img src="img/Vintage-21-01-2019_19h05m44s.webp" alt="Logo" style="height: 120px; width: 400px;" title="Home page">
         </div>
         <h1 class="text-center">World's Famous Shakes</h1>
       </div>
@@ -72,6 +74,47 @@
     </section>
     
   <!-- end of Images carousel -->  
+
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col text-center">
+          <h2>Why Choose Us</h2>
+          <div class="pb-4"></div>
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-12 pb-4">
+              <div class="card shadow" style="border-radius: 2rem !important; border: 4px solid red !important;">
+                <i class="fas fa-headset fa-2xl"></i> <!-- Customer service icon -->
+                <div class="card-body">
+                  <h5 class="card-title">Great Customer Service</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident animi consequuntur laudantium quaerat fuga quidem ipsa corporis placeat quae eveniet, labore perspiciatis hic delectus veniam .</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 pb-4">
+              <div class="card shadow" style="border-radius: 2rem !important; border: 4px solid red !important;">
+                <i class="fas fa-utensils fa-2xl"></i> <!-- Grill icon -->
+                <div class="card-body">
+                  <h5 class="card-title">Fast Service</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolor in quibusdam quos quisquam quo animi provident sapiente voluptatum, perspiciatis explicabo. Eum a saepe corporis enim expedita, quisquam natus tempora?</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 pb-4">
+              <div class="card shadow" style="border-radius: 2rem !important; border: 4px solid red !important;">
+                <i class="fas fa-hamburger fa-2xl"></i> <!-- Burger-soda icon -->
+                <div class="card-body">
+                  <h5 class="card-title">Great Quality Food</h5>
+                  <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis expedita voluptatem cupiditate placeat quas ullam repellendus, dolorem qui nam. Repellat commodi blanditiis id vero eligendi aperiam magnam deleniti </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
 
   <!-- history -->  
 
@@ -288,7 +331,7 @@
     <h1 class="text-center">Seasonal Hours</h1>
     <div class="row justify-content-center mt-5">
       <div class="col-xl-4 col-md-12 mb-5 d-flex align-items-center justify-content-center">
-        <div class="card border-0">
+        <div class="card shadow card-hours">
           <div class="card-body">
             <h2 class="card-title text-center">Usually Opens by Memorial Day</h1>
           </div>
@@ -304,7 +347,7 @@
           </div>
         </div>
       </div><div class="col-xl-4 col-md-12 mb-5 d-flex align-items-center justify-content-center">
-        <div class="card border-0">
+        <div class="card shadow card-hours">
           <div class="card-body">
             <h2 class="card-title text-center">Usually Closes by Labor Day</h2>
           </div>
@@ -344,7 +387,6 @@
             <button type="button" class="btn btn-xl btn-danger shadow" onclick="window.location.href = 'https://goo.gl/maps/63BkaSiart6SMobH7?coh=178572&entry=tt';" style="border-radius: 2rem; border: 4px solid black;">View Map</button>
             <p class="pb-4"></p>
           </div>
-          
         </div>  
       </div>
     </div>

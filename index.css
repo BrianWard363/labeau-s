@@ -46,7 +46,7 @@ body {
 }
 
 .centered-logo img {
-  padding: 30px;
+  box-sizing: border-box;
 }
 
 .img-border {
@@ -80,6 +80,7 @@ body {
 
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  font-size: 20px;
 }
 
 .nav-item {
@@ -243,6 +244,19 @@ select:focus {
   outline: 2px solid red;
 }
 
+input:invalid,
+select:invalid,
+textarea:invalid {
+  outline: 2px solid red;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+  outline: none;
+}
+
+
 .link {
   font-weight: bold;
   color: red;
@@ -326,4 +340,18 @@ select:focus {
   border-top-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
   border-bottom: 4px solid red;
+}
+
+#circleCanvas {
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+form {
+  outline-style: red !important;
 }
