@@ -53,28 +53,13 @@ function generateValidCircle() {
   };
 
   // Check if the new circle overlaps with any existing circles
-  var attempts = 0;
-  var maxAttempts = 100; // Maximum attempts to find a valid circle
-  while (attempts < maxAttempts) {
-    var overlap = false;
-    for (var i = 0; i < circles.length; i++) {
-      if (circlesOverlap(circle, circles[i])) {
-        overlap = true;
-        break;
-      }
+  for (var i = 0; i < circles.length; i++) {
+    if (circlesOverlap(circle, circles[i])) {
+      return generateValidCircle(); // Generate a new circle
     }
-    if (!overlap) {
-      return circle; // Valid circle found
-    }
-    attempts++;
-    // Generate new random position and radius
-    x = getRandomNumber(radius, canvasWidth - radius);
-    y = getRandomNumber(radius, canvasHeight - radius);
-    circle.x = x;
-    circle.y = y;
   }
 
-  return null; // Could not find a valid circle within the attempts limit
+  return circle;
 }
 
 // Function to draw a circle
@@ -89,33 +74,27 @@ function drawCircle(circle) {
 function drawCircles(count) {
   for (var i = 0; i < count; i++) {
     var circle = generateValidCircle();
-    if (circle) {
-      circles.push(circle);
-      drawCircle(circle);
-    }
+    circles.push(circle);
+    drawCircle(circle);
   }
 }
 
 // Call the drawCircles function to draw circles initially
 drawCircles(10);
 
-// Update circle positions on resize with throttling
-var resizeTimeout;
+// Update circle positions on resize
 window.addEventListener('resize', function() {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(function() {
-    // Update the canvas dimensions
-    canvasWidth = window.innerWidth;
-    canvasHeight = window.innerHeight;
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+  // Update the canvas dimensions
+  canvasWidth = window.innerWidth;
+  canvasHeight = window.innerHeight;
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
 
-    // Update the positions of the circles based on the new dimensions
-    for (var i = 0; i < circles.length; i++) {
-      var circle = circles[i];
-      circle.x = getRandomNumber(circle.radius, canvasWidth - circle.radius);
-      circle.y = getRandomNumber(circle.radius, canvasHeight - circle.radius);
-      drawCircle(circle);
-    }
-  }, 100); // Throttle the event handler to update every 100ms
+  // Update the positions of the circles based on the new dimensions
+  for (var i = 0; i < circles.length; i++) {
+    var circle = circles[i];
+    circle.x = getRandomNumber(circle.radius, canvasWidth - circle.radius);
+    circle.y = getRandomNumber(circle.radius, canvasHeight - circle.radius);
+    drawCircle(circle);
+  }
 });
