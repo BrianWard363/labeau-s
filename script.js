@@ -1,79 +1,121 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('circleCanvas');
-  const ctx = canvas.getContext('2d');
-  const sizes = ['small', 'medium', 'large'];
-  const circleRadiusRange = { min: 10, max: 40 };
-  const spacing = 60;
+// Get the canvas element
+var canvas = document.getElementById('circleCanvas');
 
-  const numCircles = 20;
-  let circles = [];
+// Get the canvas dimensions and 2D rendering context
+var canvasWidth = window.innerWidth;
+var canvasHeight = window.innerHeight;
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+var ctx = canvas.getContext('2d');
 
-  function initializeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+// Array to store circle objects
+var circles = [];
+
+// Function to generate a random number within a range
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+// Function to generate a random color
+function getRandomColor() {
+  return 'red';
+}
+
+// Function to check if two circles overlap
+function circlesOverlap(circle1, circle2) {
+  var dx = circle1.x - circle2.x;
+  var dy = circle1.y - circle2.y;
+  var distance = Math.sqrt(dx * dx + dy * dy);
+  return distance < circle1.radius + circle2.radius;
+}
+
+// Function to generate a valid circle
+function generateValidCircle() {
+  var maxRadius;
+
+  if (circles.length === 0) {
+    // If it's the first circle, set a maximum radius
+    maxRadius = Math.min(canvasWidth, canvasHeight) / 10;
+  } else {
+    // For subsequent circles, use a smaller maximum radius
+    maxRadius = Math.min(canvasWidth, canvasHeight) / 20;
   }
 
-  function initializeCircles() {
-    for (let i = 0; i < numCircles; i++) {
-      const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
-      const randomRadius = getRandomNumber(circleRadiusRange.min, circleRadiusRange.max);
-      let randomX, randomY;
-      let isOverlapping = true;
+  var radius = getRandomNumber(10, maxRadius);
+  var x = getRandomNumber(radius, canvasWidth - radius);
+  var y = getRandomNumber(radius, canvasHeight - radius);
 
-      while (isOverlapping) {
-        randomX = Math.floor(Math.random() * (canvas.width - 2 * (randomRadius + spacing))) + (randomRadius + spacing);
-        randomY = Math.floor(Math.random() * (canvas.height - 2 * (randomRadius + spacing))) + (randomRadius + spacing);
+  // Create a new circle object
+  var circle = {
+    x: x,
+    y: y,
+    radius: radius
+  };
 
-        if (!isCircleOverlapping(randomX, randomY, randomRadius)) {
-          isOverlapping = false;
-        }
+  // Check if the new circle overlaps with any existing circles
+  var attempts = 0;
+  var maxAttempts = 100; // Maximum attempts to find a valid circle
+  while (attempts < maxAttempts) {
+    var overlap = false;
+    for (var i = 0; i < circles.length; i++) {
+      if (circlesOverlap(circle, circles[i])) {
+        overlap = true;
+        break;
       }
+    }
+    if (!overlap) {
+      return circle; // Valid circle found
+    }
+    attempts++;
+    // Generate new random position and radius
+    x = getRandomNumber(radius, canvasWidth - radius);
+    y = getRandomNumber(radius, canvasHeight - radius);
+    circle.x = x;
+    circle.y = y;
+  }
 
-      const adjustedX = randomX;
-      const adjustedY = randomY;
+  return null; // Could not find a valid circle within the attempts limit
+}
 
-      circles.push({ x: adjustedX, y: adjustedY, radius: randomRadius });
+// Function to draw a circle
+function drawCircle(circle) {
+  ctx.beginPath();
+  ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
+  ctx.fillStyle = getRandomColor();
+  ctx.fill();
+}
 
-      drawCircle(adjustedX, adjustedY, randomRadius, randomSize);
+// Draw multiple circles
+function drawCircles(count) {
+  for (var i = 0; i < count; i++) {
+    var circle = generateValidCircle();
+    if (circle) {
+      circles.push(circle);
+      drawCircle(circle);
     }
   }
+}
 
-  function drawCircle(x, y, radius, size) {
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'red';
-    ctx.fill();
-    ctx.closePath();
-  }
+// Call the drawCircles function to draw circles initially
+drawCircles(10);
 
-  function isCircleOverlapping(x, y, radius) {
-    for (let i = 0; i < circles.length; i++) {
-      const circle = circles[i];
-      const dx = circle.x - x;
-      const dy = circle.y - y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+// Update circle positions on resize with throttling
+var resizeTimeout;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(function() {
+    // Update the canvas dimensions
+    canvasWidth = window.innerWidth;
+    canvasHeight = window.innerHeight;
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
 
-      if (distance < circle.radius + radius + spacing) {
-        return true;
-      }
+    // Update the positions of the circles based on the new dimensions
+    for (var i = 0; i < circles.length; i++) {
+      var circle = circles[i];
+      circle.x = getRandomNumber(circle.radius, canvasWidth - circle.radius);
+      circle.y = getRandomNumber(circle.radius, canvasHeight - circle.radius);
+      drawCircle(circle);
     }
-
-    return false;
-  }
-
-  function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  initializeCanvas();
-  initializeCircles();
-
-  window.addEventListener('resize', () => {
-    circles = [];
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    initializeCanvas();
-    initializeCircles();
-  });
+  }, 100); // Throttle the event handler to update every 100ms
 });
