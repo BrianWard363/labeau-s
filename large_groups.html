@@ -28,30 +28,43 @@
         <h3 class="text-center">Large Groups of 20+ People</h3>
         <p>To ensure smooth coordination and efficient organization, kindly complete the provided form at least 24 hours in advance if your group consists of more than 20 individuals.</p>
         <hr>
-        <form id="quit-application-form" target="_blank" action="https://formsubmit.co/d9a50db1ba50c5ce9ac9c61ab6bf414a" method="POST" onsubmit="submitForm(event)">
+        <form id="groups-form" class="forms" target="_blank" action="https://formsubmit.co/d9a50db1ba50c5ce9ac9c61ab6bf414a" method="POST" onsubmit="submitForm(event)">
           <div class="row mb-3">
             <div class="col-md-6 mb-3">
-                <label for="reason-for-work" class="form-label">1. Name of Group</label>
+                <label for="groups" class="form-label">1. Name of Group</label>
               <input type="text" name="Name" class="form-control" placeholder="Name for group" required>
             </div>
             <div class="col-md-6 mb-3">
-                <label for="reason-for-work" class="form-label">2. Number of people</label>
-              <input type="text" name="Wage" class="form-control" placeholder="Number of people" required>
+                <label for="ghroups" class="form-label">2. Number of people</label>
+              <input type="text" name="# of people" class="form-control" placeholder="Number of people" required>
             </div>
             <div class="col">
-              <label for="reason-for-work" class="form-label">Date</label>
+              <label for="groups" class="form-label">3. Date</label>
             <input type="text" name="Date" class="form-control" placeholder="Number of people" required>
           </div>
           </div>
           <div class="col">
-            <label for="reason-for-work" class="form-label">3. What is your order (It dosen't have to be everything but give us the general idea for the order.)</label>
-            <textarea name="Reason for leaving" class="form-control" rows="10" placeholder="What is Your Order" required></textarea>
+            <label for="groups" class="form-label">4. What is your order (It dosen't have to be everything but give us the general idea for the order.)</label>
+            <textarea name="What is your order?" class="form-control" rows="10" placeholder="What is Your Order" required></textarea>
           </div>
           <br>
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">  
           <button type="submit" class="btn btn-xl btn-danger shadow" style="border-radius: 2rem; border: 4px solid black;">Large Groups Form</button>
           <p><br/></p>
         </form>
       </div>
       </div>
 
+      <div class="container pb-4">
+        <div id="message" class="popup">
+          <div class="popup-content">
+            <span class="fa fa-check-circle" style="color: green;"></span>
+            <p>Form submitted successfully!</p>
+            <br>
+            <p>We will get in touch with you shortly.</p>
+            <button id="close-button" class="close-button">X</button>
+          </div>
+        </div>
+      </div>
     <div id="footer"></div>
