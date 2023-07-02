@@ -82,16 +82,13 @@ function drawCircles(count) {
 // Call the drawCircles function to draw circles initially
 drawCircles(10);
 
-// Update circle positions on resize and orientation change
-function updateCirclePositions() {
+// Update circle positions on resize
+window.addEventListener('resize', function() {
   // Update the canvas dimensions
   canvasWidth = window.innerWidth;
   canvasHeight = window.innerHeight;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
-
-  // Clear the canvas
-  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
   // Update the positions of the circles based on the new dimensions
   for (var i = 0; i < circles.length; i++) {
@@ -100,7 +97,4 @@ function updateCirclePositions() {
     circle.y = getRandomNumber(circle.radius, canvasHeight - circle.radius);
     drawCircle(circle);
   }
-}
-
-window.addEventListener('resize', updateCirclePositions);
-window.addEventListener('orientationchange', updateCirclePositions);
+});
